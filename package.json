@@ -1,0 +1,20 @@
+{
+  "name": "murdoc",
+  "version": "0.0.1",
+  "description": "Documentation generator based on markdown",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BjornRombaut/murdoc.git"
+  },
+  "author": "Bjorn Rombaut",
+  "license": "MIT",
+  "bin": {
+    "murdoc": "./index.js"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "glob-concat": "^1.0.1",
+    "livereload": "^0.4.1",
+    "marked": "^0.3.5"
+  }
+}

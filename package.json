@@ -1,6 +1,6 @@
 {
   "name": "murdoc",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Documentation generator based on markdown",
   "repository": {
     "type": "git",

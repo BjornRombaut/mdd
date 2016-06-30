@@ -1,21 +1,21 @@
-# mdc
+# mdd
 
-mdc is a documentation platform based on markdown. Write your documentation in markdown and mdc converts it to a beautiful website using express, livereload, marked, and highlightjs.
+mdd is a documentation platform based on markdown. Write your documentation in markdown and mdd converts it to a beautiful website using express, livereload, marked, and highlightjs.
 
 ## Installation
 
 ```bash
-npm install mdc -g
+npm install mdd -g
 ```
 
 ## Usage
 
-Start up mdc in any folder you want.
+Start up mdd in any folder you want.
 
 ```bash
-mdc
+mdd
 ```
 
 ## Documentation
 
-All documentation can be found at [mdc.bjornrombaut.be](http://mdc.bjornrombaut.be).
+All documentation can be found at [mdd.bjornrombaut.be](http://mdd.bjornrombaut.be).

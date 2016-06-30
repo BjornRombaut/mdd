@@ -11,12 +11,12 @@ var app = express();
 
 class Server {
     start(cfg, cwd) {
-        app.get('/mdc.css', function(req, res) {
-            res.sendFile(path.join(__dirname, 'static', 'mdc.css'));
+        app.get('/mdd.css', function(req, res) {
+            res.sendFile(path.join(__dirname, 'static', 'mdd.css'));
         });
 
-        app.get('/mdc.js', function(req, res) {
-            res.sendFile(path.join(__dirname, 'static', 'mdc.js'));
+        app.get('/mdd.js', function(req, res) {
+            res.sendFile(path.join(__dirname, 'static', 'mdd.js'));
         });
 
         app.get('*', function(req, res) {
@@ -79,7 +79,7 @@ class Server {
         });
 
         app.listen(cfg.port);
-        console.log('mdc server started at port', cfg.port);
+        console.log('mdd server started at port', cfg.port);
         console.log('Livereload server started at port', cfg.livereload);
         var server = livereload.createServer({
             exts: ['md'],

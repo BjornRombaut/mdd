@@ -1,6 +1,6 @@
 # Advanced Example
 
-You can use a custom config with mdc. For example using the following folder structure:
+You can use a custom config with mdd. For example using the following folder structure:
 
 - src
     - example
@@ -10,12 +10,12 @@ You can use a custom config with mdc. For example using the following folder str
     - usage
         - doc
             - getting-started.md
-- mdc.js
+- mdd.js
 - README.md
 
 The `README.md` file will be used as index page, the other markdown files will all get there own page and item in the sidebar.
 
-## Configure mdc
+## Configure mdd
 
 ```js
 module.exports = {
@@ -28,10 +28,10 @@ module.exports = {
 }
 ```
 
-## Start mdc
+## Start mdd
 
 ```bash
-mdc
+mdd
 ```
 
 ## Open your browser

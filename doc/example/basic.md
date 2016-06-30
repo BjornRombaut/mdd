@@ -1,6 +1,6 @@
 # Basic Example
 
-Without custom config, mdc works best with the following folder structure:
+Without custom config, mdd works best with the following folder structure:
 
 - doc
     - example
@@ -11,10 +11,10 @@ Without custom config, mdc works best with the following folder structure:
 
 The `README.md` file will be used as index page, the other markdown files will all get there own page and item in the sidebar.
 
-## Start mdc
+## Start mdd
 
 ```bash
-mdc
+mdd
 ```
 
 ## Open your browser

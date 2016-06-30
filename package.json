@@ -1,15 +1,15 @@
 {
-  "name": "mdc",
+  "name": "mdd",
   "version": "0.0.1",
   "description": "Documentation generator based on markdown",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BjornRombaut/mdc.git"
+    "url": "git+https://github.com/BjornRombaut/mdd.git"
   },
   "author": "Bjorn Rombaut",
   "license": "MIT",
   "bin": {
-    "mdc": "./index.js"
+    "mdd": "./index.js"
   },
   "dependencies": {
     "express": "^4.14.0",

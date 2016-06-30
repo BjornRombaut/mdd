@@ -159,6 +159,7 @@ body {
 
 .body--index .menu {
     border-bottom: solid thin #e5e5e5;
+    min-height: 0;
 }
 
 .doc {

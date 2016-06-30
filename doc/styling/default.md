@@ -1,6 +1,6 @@
 # Styling
 
-By Default, murdoc will add some styling to the converted markdown.
+By Default, mdc will add some styling to the converted markdown.
 
 ## Titles
 
@@ -43,10 +43,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 ## Links
 
 ```md
-Here is a [link](http://murdoc.bjornrombaut.be)
+Here is a [link](http://mdc.bjornrombaut.be)
 ```
 
-Here is a [link](http://murdoc.bjornrombaut.be)
+Here is a [link](http://mdc.bjornrombaut.be)
 
 
 ## Lists

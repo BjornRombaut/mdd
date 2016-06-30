@@ -1,6 +1,6 @@
 # Advanced Example
 
-You can use a custom config with murdoc. For example using the following folder structure:
+You can use a custom config with mdc. For example using the following folder structure:
 
 - src
     - example
@@ -10,12 +10,12 @@ You can use a custom config with murdoc. For example using the following folder 
     - usage
         - doc
             - getting-started.md
-- murdoc.js
+- mdc.js
 - README.md
 
 The `README.md` file will be used as index page, the other markdown files will all get there own page and item in the sidebar.
 
-## Configure murdoc
+## Configure mdc
 
 ```js
 module.exports = {
@@ -28,10 +28,10 @@ module.exports = {
 }
 ```
 
-## Start murdoc
+## Start mdc
 
 ```bash
-murdoc
+mdc
 ```
 
 ## Open your browser

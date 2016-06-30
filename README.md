@@ -1,21 +1,21 @@
-# Murdoc
+# mdc
 
-Murdoc is a documentation platform based on markdown. Write your documentation in markdown and murdoc converts it to a beautiful website using express, livereload, marked, and highlightjs.
+mdc is a documentation platform based on markdown. Write your documentation in markdown and mdc converts it to a beautiful website using express, livereload, marked, and highlightjs.
 
 ## Installation
 
 ```bash
-npm install murdoc -g
+npm install mdc -g
 ```
 
 ## Usage
 
-Start up murdoc in any folder you want.
+Start up mdc in any folder you want.
 
 ```bash
-murdoc 
+mdc
 ```
 
 ## Documentation
 
-All documentation can be found at [murdoc.bjornrombaut.be](http://murdoc.bjornrombaut.be).
+All documentation can be found at [mdc.bjornrombaut.be](http://mdc.bjornrombaut.be).

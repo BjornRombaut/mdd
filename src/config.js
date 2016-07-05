@@ -14,6 +14,8 @@ class Config {
             }
         } catch(err) {}
 
+        baseConfig.name =  baseConfig.name || cwd.substring(cwd.lastIndexOf('/') + 1, cwd.length);
+
         return baseConfig;
     }
 }

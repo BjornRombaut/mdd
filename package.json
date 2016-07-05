@@ -1,6 +1,6 @@
 {
   "name": "mdd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Documentation generator based on markdown",
   "repository": {
     "type": "git",

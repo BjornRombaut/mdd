@@ -24,6 +24,7 @@ class Server {
             var isIndex = req.url === '/';
             for (var file of files.get(cfg, cwd)) {
                 var url = file.replace(path.join(cwd, cfg.src, '/'), '').replace('.md', '');
+                url = url.replace(/\s+/g, '-').toLowerCase();
                 url = cfg.mapUrl(url);
                 if (req.url === path.join('/' + url)) {
                     requestedFile = file;

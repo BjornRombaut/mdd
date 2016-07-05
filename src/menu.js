@@ -30,6 +30,7 @@ class Menu {
 
         for (var file of files.get(cfg, cwd)) {
             var url = file.replace(path.join(cwd, cfg.src, '/'), '').replace('.md', '');
+            url = url.replace(/\s+/g, '-').toLowerCase();
             url = cfg.mapUrl(url);
             menu = mergeFileStructure(menu, url, url, file);
         }

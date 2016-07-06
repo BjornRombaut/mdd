@@ -29,10 +29,14 @@ class Menu {
         }
 
         for (var file of files.get(cfg, cwd)) {
-            var url = file.replace(path.join(cwd, cfg.src, '/'), '').replace('.md', '');
-            url = url.replace(/\s+/g, '-').toLowerCase();
-            url = cfg.mapUrl(url);
-            menu = mergeFileStructure(menu, url, url, file);
+            if (file.indexOf('node_modules') === -1) {
+                var url = file.replace(path.join(cwd, cfg.src, '/'), '').replace('.md', '');
+                if (url !== 'README') {
+                    url = url.replace(/\s+/g, '-').toLowerCase();
+                    url = cfg.mapUrl(url);
+                    menu = mergeFileStructure(menu, url, url, file);
+                }
+            }
         }
 
         return menu;

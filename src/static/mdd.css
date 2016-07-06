@@ -106,6 +106,10 @@ body {
     overflow: auto;
 }
 
+.menu > .menu__item > a {
+    padding-left: 20px;
+}
+
 .menu__sub {
     list-style-type: none;
     padding: 0;

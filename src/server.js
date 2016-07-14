@@ -5,19 +5,19 @@ var livereload = require('livereload');
 var fs = require('fs');
 var path = require('path');
 var menu = require('./menu');
+var theme = require('./theme');
 var html = require('./html');
 var files = require('./files');
 var app = express();
 
 class Server {
     start(cfg, cwd) {
-        app.get('/mdd.css', function(req, res) {
-            res.sendFile(path.join(__dirname, 'static', 'mdd.css'));
+        app.use('/static/mdd.css', function(req, res){
+            res.type('text/css'); 
+            res.send(theme.generate(cfg));
         });
 
-        app.get('/mdd.js', function(req, res) {
-            res.sendFile(path.join(__dirname, 'static', 'mdd.js'));
-        });
+        app.use('/static', express.static(path.join(__dirname, 'static')));
 
         app.get('*', function(req, res) {
             var requestedFile;

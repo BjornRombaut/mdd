@@ -16,6 +16,15 @@ Start up mdd in any folder you want.
 mdd
 ```
 
+## Features
+
+- Serve and Live Reload
+- Build
+- Theming
+- Custom Templates
+- Syntax Highlighting (highlightjs)
+- Easy Configuration
+
 ## Documentation
 
 All documentation can be found at [mdd.bjornrombaut.be](http://mdd.bjornrombaut.be).

@@ -5,27 +5,30 @@ var path = require('path');
 
 class HTML {
     get(cfg, cwd, options) {
-        var app = '<html><head>';
-        app += '<title>' + cfg.name + '</title>'
-        app += '<meta name="viewport" content="width=device-width, initial-scale=1">'
-        app += '<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github-gist.min.css">'
-        app += '<link rel="stylesheet" href="/mdd.css">'
-        if (!options.isIndex) {
-            app += '</head><body>';
-        } else {
-            app += '</head><body class="body--index">';
-        }
-        app += '<nav class="sidebar"><div class="header"><input class="search" placeholder="Search" id="search" type="text"></div>' + options.menu + '</nav>';
-        app += '<section class="content"><div class="header"><a href="/">' + cfg.name + '</a></div><div class="wrapper"><div class="doc">' + options.content + '</div></div></section>';
-        app += '<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>';
-        app += '<script src="/mdd.js"></script>';
+        var template = cfg.templateUrl ? path.join(cwd, cfg.templateUrl) : path.join(__dirname, 'templates/' + cfg.template + '.html');
+        var html = fs.readFileSync(template, {encoding: 'utf8'});
+
+        var scripts = '<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>';
+        scripts += '<script src="/static/mdd.js"></script>'
         if (options.livereload) {
-            app += '<script src="http://localhost:' + cfg.livereload + '/livereload.js?snipver=1"></script>';
+            scripts += '<script src="http://localhost:' + cfg.livereload + '/livereload.js?snipver=1"></script>';
+        }
+        html = html.replace(/#\{SCRIPTS\}/g, scripts);
+
+        var styles = '<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github-gist.min.css">';
+        styles += '<link rel="stylesheet" href="/static/mdd.css">';
+        html = html.replace(/#\{STYLES\}/g, styles);
+
+        if (!options.isIndex) {
+            html = html.replace(/#\{BODY_CLASS\}/g, 'body--' + cfg.template);
         } else {
-            app += '</body></html>';
+            html = html.replace(/#\{BODY_CLASS\}/g, 'body--index body--' + cfg.template);
         }
 
-        return app;
+        html = html.replace(/#\{TITLE\}/g, cfg.name);
+        html = html.replace(/#\{MENU\}/g, options.menu);
+        html = html.replace(/#\{CONTENT\}/g, options.content);
+        return html;
     }
 
 

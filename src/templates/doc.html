@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>#{TITLE}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        #{STYLES}
+    </head>
+    <body class="#{BODY_CLASS}">
+        <nav class="sidebar">
+            <div class="header">
+                <input class="search" placeholder="Search" id="search" type="text">
+            </div>
+            #{MENU}
+        </nav>
+        <section class="content">
+            <div class="header">
+                <a href="/">#{TITLE}</a>
+            </div>
+            <div class="wrapper">
+                <div class="doc">
+                    #{CONTENT}
+                </div>
+            </div>
+        </section>
+        #{SCRIPTS}
+    </body>
+</html>
